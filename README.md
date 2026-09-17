@@ -1,18 +1,18 @@
-# Ian Xiaohei Illustrations
+# 小黑熊 Illustrations (Xiaoheixiong Illustrations)
 
 > 把中文文章里的判断、流程、状态和隐喻，变成一张张白底、手绘、怪诞但清爽的正文配图。
 >
-> 16:9 横版 | 小黑 IP | 纯白手绘 | 少量红橙蓝中文批注 | Codex Skill
+> 16:9 横版 | 小黑熊 IP | 纯白手绘 | 少量红橙蓝中文批注 | Codex Skill
 
 ---
 
 ## 这个仓库是什么
 
-Ian Xiaohei Illustrations 是一个 Codex Skill，用来指导 AI Agent 为中文文章、帖子、博客、Notion 文档和方法论内容生成正文配图。
+小黑熊 Illustrations 是一个 Codex Skill，用来指导 AI Agent 为中文文章、帖子、博客、Notion 文档和方法论内容生成正文配图。
 
 它不是通用插画 prompt，也不是 PPT 信息图模板。它的核心目标是：先理解文章里的认知锚点，再把其中一个判断、流程、结构、状态或隐喻，变成一张有记忆点的 16:9 手绘解释图。
 
-默认视觉 IP 是“小黑”：一个黑色实心、白点眼、细腿、空表情的小角色。小黑不是吉祥物，不是贴纸，也不是站在角落里的装饰物，而是正在认真参与系统运转的荒诞工作者。
+默认视觉 IP 是“小黑熊”：一只黑色实心、圆耳朵、白点眼、细胳膊细腿、戴一条橙色小围巾的小熊。小黑熊不是吉祥物，不是贴纸，也不是站在角落里的装饰物，而是正在认真参与系统运转的荒诞工作者。
 
 一句话：**让 AI 不只是“配一张图”，而是把文章里的一个关键认知动作画出来。**
 
@@ -44,7 +44,7 @@ Ian Xiaohei Illustrations 是一个 Codex Skill，用来指导 AI Agent 为中�
 
 - 16:9 横版正文配图
 - 一篇文章的 4-8 张 shot list
-- 每张图的主题、核心意思、结构类型、小黑动作和中文标注建议
+- 每张图的主题、核心意思、结构类型、小黑熊动作和中文标注建议
 - 最终 PNG 图片，保存到 workspace 的 `assets/<article-slug>-illustrations/`
 
 默认不输出：
@@ -58,15 +58,18 @@ Ian Xiaohei Illustrations 是一个 Codex Skill，用来指导 AI Agent 为中�
 
 ## 视觉风格
 
-这个 skill 默认使用 Ian 的“小黑怪诞正文配图”风格：
+这个 skill 默认使用“小黑熊怪诞正文配图”风格：
 
 - 纯白背景，不要纸纹、米色、阴影、渐变
 - 黑色手绘线稿，细线，轻微抖动
 - 大量留白，主体只占画面约 40%-60%
 - 少量红色、橙色、蓝色中文手写批注
+- 小黑熊戴一条小小的橙色针织围巾，是它唯一的固定识别物
 - 一张图只表达一个核心动作、结构、状态或隐喻
-- 小黑必须参与核心动作，不能只是装饰
+- 小黑熊必须参与核心动作，不能只是装饰
 - 怪诞、有创意、清爽，但不幼稚、不卖萌
+
+官方形象设定图见 [`xiaoheixiong-illustrations/assets/character-sheet.png`](xiaoheixiong-illustrations/assets/character-sheet.png)。
 
 ---
 
@@ -113,21 +116,21 @@ Ian Xiaohei Illustrations 是一个 Codex Skill，用来指导 AI Agent 为中�
 克隆仓库：
 
 ```bash
-git clone https://github.com/helloianneo/ian-xiaohei-illustrations.git
-cd ian-xiaohei-illustrations
+git clone https://github.com/wekobear/ian-xiaoheixiong-illustrations.git
+cd ian-xiaoheixiong-illustrations
 ```
 
 复制 skill 到 Codex skills 目录：
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R ./ian-xiaohei-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R ./xiaoheixiong-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
 安装后，在 Codex 里使用：
 
 ```text
-Use $ian-xiaohei-illustrations 为这篇中文文章设计并生成 5 张小黑怪诞正文配图。
+Use $xiaoheixiong-illustrations 为这篇中文文章设计并生成 5 张小黑熊怪诞正文配图。
 ```
 
 ---
@@ -137,9 +140,9 @@ Use $ian-xiaohei-illustrations 为这篇中文文章设计并生成 5 张小黑�
 ### 只做配图规划
 
 ```text
-Use $ian-xiaohei-illustrations 先不要生图。
+Use $xiaoheixiong-illustrations 先不要生图。
 请分析下面这篇文章哪里值得配图，输出 5 张左右的 shot list。
-每张图写清楚：放在哪段后、主题、核心意思、结构类型、小黑在做什么、建议中文标注词。
+每张图写清楚：放在哪段后、主题、核心意思、结构类型、小黑熊在做什么、建议中文标注词。
 
 <粘贴文章>
 ```
@@ -147,7 +150,7 @@ Use $ian-xiaohei-illustrations 先不要生图。
 ### 直接生成正文配图
 
 ```text
-Use $ian-xiaohei-illustrations 把下面这篇文章生成 4 张小黑怪诞正文配图。
+Use $xiaoheixiong-illustrations 把下面这篇文章生成 4 张小黑熊怪诞正文配图。
 要求：16:9 横版、纯白背景、黑色手绘线稿、少量红橙蓝中文手写批注。
 
 <粘贴文章>
@@ -156,14 +159,14 @@ Use $ian-xiaohei-illustrations 把下面这篇文章生成 4 张小黑怪诞正�
 ### 为单个概念生成一张图
 
 ```text
-Use $ian-xiaohei-illustrations 为“信任不是喊出来的，而是一块证据一块证据铺过去”生成一张正文配图。
-画面要怪诞但清爽，小黑必须承担核心动作。
+Use $xiaoheixiong-illustrations 为“信任不是喊出来的，而是一块证据一块证据铺过去”生成一张正文配图。
+画面要怪诞但清爽，小黑熊必须承担核心动作。
 ```
 
 ### 去掉图里的标题或错误文字
 
 ```text
-Use $ian-xiaohei-illustrations 帮我编辑这张图，去掉左上角的“流程图”标题，其他内容保持不变。
+Use $xiaoheixiong-illustrations 帮我编辑这张图，去掉左上角的“流程图”标题，其他内容保持不变。
 ```
 
 更多示例见 [examples/prompts.md](examples/prompts.md)。
@@ -179,9 +182,9 @@ Use $ian-xiaohei-illustrations 帮我编辑这张图，去掉左上角的“流�
 3. 先输出 shot list：每张图只选一个认知锚点
 4. 为每张图选择结构类型：Workflow、系统局部、前后对比、角色状态、概念隐喻、方法分层、地图路线或小漫画分镜
 5. 重新发明一个低科技、怪诞但成立的物理隐喻
-6. 让小黑承担核心动作
+6. 让小黑熊承担核心动作
 7. 每张图单独调用图像模型生成
-8. 按 QA checklist 检查：白底、留白、小黑动作、中文标注、非 PPT 感、非旧案例复刻
+8. 按 QA checklist 检查：白底、留白、小黑熊动作、中文标注、非 PPT 感、非旧案例复刻
 9. 保存最终 PNG，并报告用途和路径
 
 ---
@@ -193,23 +196,24 @@ Use $ian-xiaohei-illustrations 帮我编辑这张图，去掉左上角的“流�
 ├── README.md
 ├── LICENSE
 ├── NOTICE.md
-├── assets/
-│   └── ian-wechat-qr.jpg
+├── character-drafts/
+│   └── candidate-3-orange-scarf.png   # 小黑熊形象定稿来源
 ├── examples/
 │   ├── images/
 │   │   ├── 01-two-breakpoints.png
 │   │   ├── 02-sort-by-purpose.png
 │   │   └── ...
 │   └── prompts.md
-└── ian-xiaohei-illustrations/
+└── xiaoheixiong-illustrations/
     ├── SKILL.md
     ├── agents/
     │   └── openai.yaml
     ├── assets/
+    │   ├── character-sheet.png        # 小黑熊官方形象设定图
     │   └── examples/
     └── references/
         ├── style-dna.md
-        ├── xiaohei-ip.md
+        ├── xiaoheixiong-ip.md
         ├── composition-patterns.md
         ├── prompt-template.md
         └── qa-checklist.md
@@ -218,7 +222,7 @@ Use $ian-xiaohei-illustrations 帮我编辑这张图，去掉左上角的“流�
 真正需要安装到 Codex 的是子目录：
 
 ```text
-ian-xiaohei-illustrations/
+xiaoheixiong-illustrations/
 ```
 
 根目录的 README、LICENSE、NOTICE 和 examples 是 GitHub 分享文档。
@@ -229,53 +233,32 @@ ian-xiaohei-illustrations/
 
 - 图片里的中文文字越短越稳定。
 - 每张图只讲一个核心结构，不要把文章做成说明书。
-- 小黑必须承担核心动作；如果去掉小黑画面仍然完全成立，说明小黑太装饰了。
-- 示例图只用于校准线条密度、留白、颜色克制和小黑参与方式，不要复刻构图。
+- 小黑熊必须承担核心动作；如果去掉小黑熊画面仍然完全成立，说明小黑熊太装饰了。
+- 示例图只用于校准线条密度、留白、颜色克制和小黑熊参与方式，不要复刻构图。
 - AI 图像模型可能出现错字、幻觉标签、风格漂移或多余标题，生成后需要检查。
 - 如果中文错字严重，优先减少标注词并重生成。
 
 ---
 
-## 相关项目
+## 原版与致谢
 
+本仓库基于 Ian (helloianneo) 的原创 skill **Ian Xiaohei Illustrations** 改编：替换了视觉 IP（原版无耳小怪物“小黑” → 本版圆耳橙围巾小熊“小黑熊”），并按 MIT 协议保留原作者署名（见 [NOTICE.md](NOTICE.md)）。
+
+原版作者与相关项目：
+
+- 原版仓库与作者：[Ian (helloianneo)](https://github.com/helloianneo) · [www.ianneo.xyz](https://www.ianneo.xyz)
 - [Ian Handdrawn PPT](https://github.com/helloianneo/ian-handdrawn-ppt) — 中文手绘技术 PPT-style 页面图生成 Skill
 - [Awesome Claude Code Skills](https://github.com/helloianneo/awesome-claude-code-skills) — Claude Code Skills / Agents / Plugins 精选合集
 - [Obsidian + Claude AI Second Brain](https://github.com/helloianneo/obsidian-ai-second-brain) — Obsidian + Claude AI 个人知识库搭建指南
 
 ---
 
-## 关于作者
+## 关于维护
 
-**Ian (伊恩)** — 产品设计师 / 一人公司实践者 / AI Builder
-
-用 AI 团队打造一人公司。
-
-- GitHub: [helloianneo](https://github.com/helloianneo)
-- X/Twitter: [@ianneo_ai](https://x.com/ianneo_ai)
-- 网站: [www.ianneo.xyz](https://www.ianneo.xyz)
-- 微信: `ianneoxyz`
-- 邮箱: hello.neoc@gmail.com
-
----
-
-## 继续探索
-
-这套小黑配图 Skill，只是我用 AI 搭建个人生产系统里的一个小工具。
-
-如果你也在用 AI 做内容、知识库、工作流或产品化，可以继续看我的网站：[www.ianneo.xyz](https://www.ianneo.xyz)。
-
-只想先观察，可以关注我的 [X/Twitter](https://x.com/ianneo_ai)。
-
-想了解 Indie Builders Club，加微信：`ianneoxyz`，备注「OPC」。
-
-<p>
-  <img src="assets/ian-wechat-qr.jpg" alt="Ian 微信二维码" width="120">
-</p>
-
-不方便扫码也可以搜索微信：`ianneoxyz`。
+本版本的改编与维护者是 **wekobear**：[github.com/wekobear](https://github.com/wekobear)。
 
 ---
 
 ## License
 
-MIT License. See [LICENSE](LICENSE).
+MIT License. See [LICENSE](LICENSE). 原始作品版权归 Ian 所有，改编按 MIT 协议进行并在 [NOTICE.md](NOTICE.md) 中署名。
